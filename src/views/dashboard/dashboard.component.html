@@ -1,1 +1,10 @@
-<button (click)="generatePdf()">Generate PDF</button>
+<div class="card" *ngIf="company | async as seller">
+    <async-button
+        *ngFor="let template of templates | async"
+        label="Generate {{ template.name }}"
+        [job]="prepareEntryInvoiceData(template, seller)"
+        (success)="generatePdf($event)"
+    ></async-button>
+
+    <async-button label="Logout" [job]="logout"></async-button>
+</div>
