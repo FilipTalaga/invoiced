@@ -25,7 +25,9 @@ export default class DashboardComponent {
     public async generatePdf(entryInvoiceData: EntryInvoiceData) {
         const invoice = calculateInvoiceData(entryInvoiceData);
         const designDoc = makeDesignDoc(invoice);
-        makePdf(designDoc as any).download();
+        const fileName = `faktura-vat-${invoice.invoiceNumber.replace(/\//g, '-')}.pdf`;
+
+        makePdf(designDoc).download(fileName);
     }
 
     public prepareEntryInvoiceData = (
@@ -36,7 +38,7 @@ export default class DashboardComponent {
         const invoiceData = {
             ...template,
             seller,
-            invoiceNumber: 2,
+            invoiceNumber: 1,
             dateOfIssue,
         };
 
