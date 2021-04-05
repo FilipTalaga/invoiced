@@ -10,7 +10,11 @@ html {
 html,
 body {
     margin: 0;
-    height: 100%;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-surface);
 }
 
 *,
@@ -24,7 +28,7 @@ body,
 input,
 textarea,
 select {
-    color: $color-text;
+    color: var(--color-text);
 }
 
 input:-webkit-autofill,
@@ -40,7 +44,7 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus select:-webkit-autofill::first-line {
     font-size: 1rem;
     font-family: $font;
-    -webkit-text-fill-color: $color-text;
+    -webkit-text-fill-color: var(--color-text);
     box-shadow: 0 0 0px 1000px transparent inset;
     transition: background-color 5000s ease-in-out 0s;
 }

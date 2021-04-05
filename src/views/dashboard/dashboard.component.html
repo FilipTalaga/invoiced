@@ -1,4 +1,4 @@
-<div class="card" *ngIf="company | async as seller">
+<card class="card" *ngIf="company | async as seller">
     <async-button
         *ngFor="let template of templates | async"
         label="Generate {{ template.name }}"
@@ -7,4 +7,4 @@
     ></async-button>
 
     <async-button label="Logout" [job]="logout"></async-button>
-</div>
+</card>

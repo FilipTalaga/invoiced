@@ -1,8 +1,6 @@
-@import '../../assets/theme.scss';
-
 :host {
     display: flex;
-    background-color: $color-surface;
+    background-color: var(--color-surface);
     flex-direction: column;
     height: 100%;
     padding: 1rem;
@@ -10,8 +8,6 @@
 
 .card {
     padding: 2rem;
-    border-radius: 2rem;
-    background: $color-elevation;
 
     & > *:not(:last-child) {
         margin-bottom: 2rem;

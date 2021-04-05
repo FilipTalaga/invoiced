@@ -17,9 +17,11 @@ import AsyncButtonComponent from './components/async-button/async-button.compone
 import TextFieldComponent from './components/text-field/text-field.component';
 
 /* Views */
-import AppComponent from './views/app/app.component';
+import AppComponent from './views/app.component';
 import DashboardComponent from './views/dashboard/dashboard.component';
 import LoginComponent from './views/login/login.component';
+import { SandboxComponent } from './views/sandbox/sandbox.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
     declarations: [
@@ -28,6 +30,8 @@ import LoginComponent from './views/login/login.component';
         AppComponent,
         DashboardComponent,
         LoginComponent,
+        SandboxComponent,
+        CardComponent,
     ],
     imports: [BrowserModule, RoutingModule, FormsModule, AngularFireModule.initializeApp(config)],
     providers: [],

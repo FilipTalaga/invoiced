@@ -1,8 +1,6 @@
-@import '../../assets/theme.scss';
-
 :host {
     display: flex;
-    background-color: $color-surface;
+    background-color: var(--color-surface);
     flex-direction: column;
     height: 100%;
 }
@@ -17,7 +15,8 @@
 .login-form {
     display: flex;
     flex-direction: column;
-    background: $color-elevation;
+    box-shadow: var(--shadow);
+    background: var(--color-elevation);
     padding: 3rem 2rem;
     border-radius: 2rem 2rem 0 0;
 
