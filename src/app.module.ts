@@ -20,7 +20,6 @@ import TextFieldComponent from './components/text-field/text-field.component';
 import AppComponent from './views/app.component';
 import DashboardComponent from './views/dashboard/dashboard.component';
 import LoginComponent from './views/login/login.component';
-import { SandboxComponent } from './views/sandbox/sandbox.component';
 import { CardComponent } from './components/card/card.component';
 
 @NgModule({
@@ -30,7 +29,6 @@ import { CardComponent } from './components/card/card.component';
         AppComponent,
         DashboardComponent,
         LoginComponent,
-        SandboxComponent,
         CardComponent,
     ],
     imports: [BrowserModule, RoutingModule, FormsModule, AngularFireModule.initializeApp(config)],
