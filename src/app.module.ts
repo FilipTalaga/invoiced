@@ -21,6 +21,8 @@ import AppComponent from './views/app.component';
 import DashboardComponent from './views/dashboard/dashboard.component';
 import LoginComponent from './views/login/login.component';
 import { CardComponent } from './components/card/card.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from './environments/environment';
 
 @NgModule({
     declarations: [
@@ -31,7 +33,18 @@ import { CardComponent } from './components/card/card.component';
         LoginComponent,
         CardComponent,
     ],
-    imports: [BrowserModule, RoutingModule, FormsModule, AngularFireModule.initializeApp(config)],
+    imports: [
+        BrowserModule,
+        RoutingModule,
+        FormsModule,
+        AngularFireModule.initializeApp(config),
+        ServiceWorkerModule.register('ngsw-worker.js', {
+            enabled: environment.production,
+            // Register the ServiceWorker as soon as the app is stable
+            // or after 30 seconds (whichever comes first).
+            registrationStrategy: 'registerWhenStable:30000',
+        }),
+    ],
     providers: [],
     bootstrap: [AppComponent],
 })

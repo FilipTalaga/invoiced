@@ -6,7 +6,7 @@
         "start": "ng serve --open",
         "lint": "tsc && ng lint",
         "format": "prettier . --write --ignore-path .gitignore",
-        "build": "npm run lint && ng build",
+        "build": "npm run lint && ng build --prod",
         "deploy": "npm run build && firebase deploy"
     },
     "private": true,
@@ -20,6 +20,7 @@
         "@angular/platform-browser": "~11.0.5",
         "@angular/platform-browser-dynamic": "~11.0.5",
         "@angular/router": "~11.0.5",
+        "@angular/service-worker": "~11.0.5",
         "firebase": "^7.0 || ^8.0",
         "moment": "^2.29.1",
         "pdfmake": "^0.1.70",
